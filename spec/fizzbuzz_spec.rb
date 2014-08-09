@@ -20,6 +20,14 @@ describe 'fizzbuzz' do
     it 'Buzz' do
       expect(fizzbuzz(5)).to eq "Buzz"
     end
+    it 'FizzBuzz' do
+      expect(fizzbuzz(15)).to eq "FizzBuzz"
+    end
+    it 'pass the number' do
+      expect(fizzbuzz(4)).to eq 4
+      expect(fizzbuzz(7)).to eq 7
+      expect(fizzbuzz(16)). to eq 16
+    end
   end
 end
 
