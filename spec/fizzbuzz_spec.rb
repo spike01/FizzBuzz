@@ -12,5 +12,11 @@ describe 'fizzbuzz' do
       expect(is_divisible_by_15?(15)).to be true
     end
   end
+
+  context 'it knows when to' do
+    it 'Fizz' do
+      expect(fizzbuzz(3)).to eq "Fizz"
+    end
+  end
 end
 
