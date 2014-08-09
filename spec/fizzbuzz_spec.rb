@@ -11,6 +11,12 @@ describe 'fizzbuzz' do
     it '15' do
       expect(is_divisible_by_15?(15)).to be true
     end
+    it 'not 3' do
+      expect(is_divisible_by_3?(5)).to be false
+    end
+    it 'not 5' do 
+      expect(is_divisible_by_5?(1)).to be false
+    end
   end
 
   context 'it knows when to' do
