@@ -4,7 +4,6 @@ TDD FizzBuzz
 An introduction to katas and more TDD principles
 ------------
 
-The classic FizzBuzz kata, printing out numbers (usually 1 - 100), replacing numbers divisible by 3 with "Fizz", divisible by 5 with "Buzz", and divisible by 15 with "FizzBuzz".
 
 Instructions
 ----------
