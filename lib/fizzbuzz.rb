@@ -1,25 +1,59 @@
-def is_divisible_by_3? number 
-  is_divisible_by number, 3 
+class FizzBuzzControl
+  def fizzbuzz number
+    IsDivisibleBy.for(number).response
+  end
 end
 
-def is_divisible_by_5? number 
-  is_divisible_by number, 5 
+# replace conditional with polymorphism
+
+class Number
+  attr_reader :number
+  def initialize(number)
+    @number = number
+  end
+
+  def response
+    return number
+  end
 end
 
-def is_divisible_by_15? number 
-  is_divisible_by number, 15 
+# Sandi metz: inheritance is not evil, as long as it's at the lowest level of
+# your object tree. And used for specialization, not to share behaviour
+
+#naming is still shaky
+#i'm still getting my head around this
+
+class FizzBuzz < Number
+  def response
+    return "FizzBuzz"
+  end
 end
 
-def is_divisible_by number, divisor 
-  number % divisor == 0
+class Fizz < Number
+  def response
+    return "Fizz"
+  end
 end
 
-def fizzbuzz number 
-  return "FizzBuzz" if is_divisible_by_15? number 
-  return "Fizz" if is_divisible_by_3? number 
-  return "Buzz" if is_divisible_by_5? number 
-  number
+class Buzz < Number
+  def response
+    return "Buzz"
+  end
 end
 
-# puts  1..100 .map { |number| fizzbuzz number  }
+module IsDivisibleBy
+  DEFAULT_CLASS = Number
+  SPECIALIZED_CLASSES = {
+    15 => FizzBuzz,
+    3 => Fizz,
+    5 => Buzz
+  }
 
+  def self.for(number)
+    (specialized_class(number) || DEFAULT_CLASS).new(number)
+  end
+
+  def self.specialized_class(number)
+    SPECIALIZED_CLASSES.select { |key, value| number % key == 0 }[number]
+  end
+end
