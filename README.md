@@ -4,9 +4,9 @@ Enterprise FizzBuzz
 :construction:
 
 Because you need a completely SOLID FizzBuzz
-------------
+=======
 
-I watched Sandi Metz's talk on [refactoring the Gilded Rose](https://www.youtube.com/watch?v=0cKcWNj-MPI) and decided we don't need if statements any more... and things started to get out of hand.
+I watched Sandi Metz's talk on [refactoring the Gilded Rose](https://www.youtube.com/watch?v=0cKcWNj-MPI) and decided we don't need if statements any more... and things started to get out of hand. Still can't get it to select correctly for multiples... erp.
 
 Instructions
 ----------
