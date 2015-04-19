@@ -15,4 +15,4 @@ Instructions
 $ git clone https://github.com/spike01/FizzBuzz.git
 ```
 
-`rspec` for the test suite. If you want to see the numbers actually printed out, load into a REPL (`$ require './lib/fizzbuzz.rb'`) and run `puts (1..100).map { |number| Game.new.play(number) }
+`rspec` for the test suite. If you want to see the numbers actually printed out, load into a REPL (`$ require './lib/fizzbuzz.rb'`) and run `puts (1..100).map { |number| Game.new.play(number) }`
