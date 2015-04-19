@@ -13,31 +13,31 @@ class Number
   end
 
   def response
-    return number
+    number
   end
 end
 
 # Sandi metz: inheritance is not evil, as long as it's at the lowest level of
 # your object tree. And used for specialization, not to share behaviour
 
-#naming is still shaky
-#i'm still getting my head around this
+# naming is still shaky
+# i'm still getting my head around this
 
 class FizzBuzz < Number
   def response
-    return "FizzBuzz"
+    "FizzBuzz"
   end
 end
 
 class Fizz < Number
   def response
-    return "Fizz"
+    "Fizz"
   end
 end
 
 class Buzz < Number
   def response
-    return "Buzz"
+    "Buzz"
   end
 end
 
