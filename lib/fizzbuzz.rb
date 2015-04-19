@@ -1,10 +1,8 @@
-class FizzBuzzControl
-  def fizzbuzz number
+class Game
+  def play number
     IsDivisibleBy.for(number).response
   end
 end
-
-# replace conditional with polymorphism
 
 class Number
   attr_reader :number
@@ -19,9 +17,6 @@ end
 
 # Sandi metz: inheritance is not evil, as long as it's at the lowest level of
 # your object tree. And used for specialization, not to share behaviour
-
-# naming is still shaky
-# i'm still getting my head around this
 
 class FizzBuzz < Number
   def response
@@ -41,12 +36,29 @@ class Buzz < Number
   end
 end
 
+class Beep < Number
+  def response
+    "Beep"
+  end
+end
+
+class Boop < Number
+  def response
+    "Boop"
+  end
+end
+
+# This now fully follows open/closed - additional rules are implemented purely
+# by extending configuration and adding extra subclasses
+
 module IsDivisibleBy
   DEFAULT_CLASS = Number
   SPECIALIZED_CLASSES = {
     15 => FizzBuzz,
-    3 => Fizz,
-    5 => Buzz
+    7 => Boop,
+    6 => Beep,
+    5 => Buzz,
+    3 => Fizz
   }
 
   def self.for(number)
@@ -54,6 +66,6 @@ module IsDivisibleBy
   end
 
   def self.specialized_class(number)
-    SPECIALIZED_CLASSES.select { |key, value| number % key == 0 }[number]
+    SPECIALIZED_CLASSES.select { |key, value| number % key == 0 }.values.first
   end
 end
