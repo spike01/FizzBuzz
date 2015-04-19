@@ -1,5 +1,5 @@
 class Game
-  def play number
+  def play(number)
     IsDivisibleBy.for(number).response
   end
 end
@@ -15,7 +15,7 @@ class Number
   end
 end
 
-# Sandi metz: inheritance is not evil, as long as it's at the lowest level of
+# Sandi Metz: inheritance is not evil, as long as it's at the lowest level of
 # your object tree. And used for specialization, not to share behaviour
 
 class FizzBuzz < Number
@@ -48,12 +48,19 @@ class Boop < Number
   end
 end
 
+class BeepBoop < Number
+  def response
+    "BeepBoop"
+  end
+end
+
 # This now fully follows open/closed - additional rules are implemented purely
 # by extending configuration and adding extra subclasses
 
 module IsDivisibleBy
   DEFAULT_CLASS = Number
   SPECIALIZED_CLASSES = {
+    42 => BeepBoop,
     15 => FizzBuzz,
     7 => Boop,
     6 => Beep,
