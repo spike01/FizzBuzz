@@ -1,6 +1,6 @@
 require 'fizzbuzz'
 
-describe Game do
+describe NumberGame do
   subject(:game) { described_class.new }
   context 'knows when to' do
     context 'Fizz' do
@@ -26,6 +26,10 @@ describe Game do
     context 'BeepBoop' do
       it { expect(game.play 42).to eq "BeepBoop" }
       it { expect(game.play 84).to eq "BeepBoop" }
+    end
+    context 'Mihai' do
+      it { expect(game.play 66).to eq "Mihai" }
+      it { expect(game.play 132).to eq "Mihai" }
     end
     context 'pass the number' do
       it { expect(game.play 4).to eq 4 }

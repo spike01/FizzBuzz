@@ -1,4 +1,4 @@
-class Game
+class NumberGame
   def play(number)
     IsDivisibleBy.for(number).response
   end
@@ -54,12 +54,19 @@ class BeepBoop < Number
   end
 end
 
+class Mihai < Number
+  def response
+    "Mihai"
+  end
+end
+
 # This now fully follows open/closed - additional rules are implemented purely
 # by extending configuration and adding extra subclasses
 
 module IsDivisibleBy
   DEFAULT_CLASS = Number
   SPECIALIZED_CLASSES = {
+    66 => Mihai,
     42 => BeepBoop,
     15 => FizzBuzz,
     7 => Boop,
