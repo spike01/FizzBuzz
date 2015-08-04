@@ -60,12 +60,19 @@ class Mihai < Number
   end
 end
 
+class Tolemy < Number
+  def response
+    "Tolemy"
+  end
+end
+
 # This now fully follows open/closed - additional rules are implemented purely
 # by extending configuration and adding extra subclasses
 
 module IsDivisibleBy
   DEFAULT_CLASS = Number
   SPECIALIZED_CLASSES = {
+    123 => Tolemy,
     66 => Mihai,
     42 => BeepBoop,
     15 => FizzBuzz,

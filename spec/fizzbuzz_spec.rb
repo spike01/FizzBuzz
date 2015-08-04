@@ -31,6 +31,9 @@ describe NumberGame do
       it { expect(game.play 66).to eq "Mihai" }
       it { expect(game.play 132).to eq "Mihai" }
     end
+    context 'Tolemy' do
+      it { expect(game.play 123).to eq "Tolemy" }
+    end
     context 'pass the number' do
       it { expect(game.play 4).to eq 4 }
       it { expect(game.play 8).to eq 8 }
