@@ -42,9 +42,9 @@ class Beep < Number
   end
 end
 
-class Boop < Number
+class Cranberry < Number
   def response
-    "Boop"
+    "Cranberry"
   end
 end
 
@@ -62,7 +62,7 @@ module IsDivisibleBy
   SPECIALIZED_CLASSES = {
     42 => BeepBoop,
     15 => FizzBuzz,
-    7 => Boop,
+    7 => Cranberry,
     6 => Beep,
     5 => Buzz,
     3 => Fizz
