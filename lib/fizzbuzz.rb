@@ -24,9 +24,9 @@ class FizzBuzz < Number
   end
 end
 
-class Fizz < Number
+class Fazz < Number
   def response
-    "Fizz"
+    "Fazz"
   end
 end
 
@@ -42,9 +42,9 @@ class Beep < Number
   end
 end
 
-class Boop < Number
+class Cranberry < Number
   def response
-    "Boop"
+    "Cranberry"
   end
 end
 
@@ -62,10 +62,10 @@ module IsDivisibleBy
   SPECIALIZED_CLASSES = {
     42 => BeepBoop,
     15 => FizzBuzz,
-    7 => Boop,
+    7 => Cranberry,
     6 => Beep,
     5 => Buzz,
-    3 => Fizz
+    3 => Fazz
   }
 
   def self.for(number)
