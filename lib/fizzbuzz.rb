@@ -32,7 +32,7 @@ end
 
 class Buzz < Number
   def response
-    "Buzz"
+    "Bazz"
   end
 end
 
