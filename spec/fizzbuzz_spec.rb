@@ -19,9 +19,9 @@ describe Game do
       it { expect(game.play 6).to eq "Beep" }
       it { expect(game.play 12).to eq "Beep" }
     end
-    context 'Boop' do
-      it { expect(game.play 7).to eq "Boop" }
-      it { expect(game.play 14).to eq "Boop" }
+    context 'Cranberry' do
+      it { expect(game.play 7).to eq "Cranberry" }
+      it { expect(game.play 14).to eq "Cranberry" }
     end
     context 'BeepBoop' do
       it { expect(game.play 42).to eq "BeepBoop" }
