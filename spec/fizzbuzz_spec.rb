@@ -3,9 +3,9 @@ require 'fizzbuzz'
 describe Game do
   subject(:game) { described_class.new }
   context 'knows when to' do
-    context 'Fizz' do
-      it { expect(game.play 3).to eq "Fizz" }
-      it { expect(game.play 9).to eq "Fizz" }
+    context 'Fazz' do
+      it { expect(game.play 3).to eq "Fazz" }
+      it { expect(game.play 9).to eq "Fazz" }
     end
     context 'Buzz' do
       it { expect(game.play 5).to eq "Buzz" }

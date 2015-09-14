@@ -24,9 +24,9 @@ class FizzBuzz < Number
   end
 end
 
-class Fizz < Number
+class Fazz < Number
   def response
-    "Fizz"
+    "Fazz"
   end
 end
 
@@ -65,7 +65,7 @@ module IsDivisibleBy
     7 => Cranberry,
     6 => Beep,
     5 => Buzz,
-    3 => Fizz
+    3 => Fazz
   }
 
   def self.for(number)
